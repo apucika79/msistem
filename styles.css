@@ -1,75 +1,81 @@
 :root {
-  --bg: #0d1117;
-  --card: #161b22;
-  --text: #e6edf3;
-  --muted: #9da7b3;
-  --accent: #00a3ff;
-  --accent-2: #0b6ea8;
+  --hatter: #0c1220;
+  --panel: #111a2b;
+  --kiemelt: #00b3ff;
+  --szoveg: #eef4ff;
+  --halvany: #99aac9;
 }
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: var(--text);
-  background: #0a0f14;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--hatter);
+  color: var(--szoveg);
   line-height: 1.6;
 }
-.container { width: min(1100px, 92%); margin: 0 auto; }
-.topbar {
-  position: fixed; inset: 0 0 auto 0; z-index: 20;
-  background: rgba(8,12,18,.85); backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-.brand { color: #fff; font-weight: 800; letter-spacing: .08em; text-decoration: none; }
-nav a { color: var(--muted); text-decoration: none; margin: 0 10px; font-size: .95rem; }
-nav a:hover { color: #fff; }
-.btn {
-  background: var(--accent);
-  color: #fff; text-decoration: none;
-  padding: 11px 18px; border-radius: 8px;
-  font-weight: 700; border: none; cursor: pointer;
-}
-.btn:hover { background: #1bb0ff; }
-.btn-outline { border: 1px solid #2e7fab; background: transparent; }
-.btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,.2); }
-.hero {
-  min-height: 82vh;
-  background: linear-gradient(120deg, rgba(0,0,0,.65), rgba(0,0,0,.45)),
-    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop') center/cover;
-  display: grid; place-items: center; position: relative;
-}
-.hero-content { position: relative; padding-top: 70px; }
-.eyebrow { color: #7ecfff; font-weight: 700; letter-spacing: .1em; font-size: .78rem; }
-h1 { font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1.1; max-width: 18ch; margin: .2em 0; }
-.lead { max-width: 65ch; color: #d5dee8; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
-.stats { background: var(--bg); border-top: 1px solid #1f2937; border-bottom: 1px solid #1f2937; }
-.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; padding: 24px 0; text-align: center; }
-.grid-4 h3 { font-size: 1.9rem; margin: 0; color: #86d6ff; }
-.grid-4 p { margin: 3px 0 0; color: var(--muted); }
-.section { padding: 72px 0; }
-.section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-top: 0; }
-.cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
-.card { background: var(--card); border: 1px solid #273241; padding: 22px; border-radius: 10px; }
-.card h3 { margin-top: 0; }
-.alt { background: #0e141c; }
-.split { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; }
-.quote { background: #15202d; border-left: 4px solid var(--accent); padding: 18px; border-radius: 8px; }
-.logos { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
-.logos span { border: 1px solid #2b3645; text-align: center; padding: 20px 10px; border-radius: 8px; color: #b7c6d8; }
-.cta { background: linear-gradient(120deg, #0f1723, #111b2a); }
-.cta-wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: center; }
-.contact-form { display: grid; gap: 10px; }
-input, textarea {
-  width: 100%; padding: 12px; border-radius: 8px;
-  border: 1px solid #2d3949; background: #0b1118; color: #fff;
-}
-textarea { min-height: 120px; resize: vertical; }
-footer { border-top: 1px solid #202b3a; padding: 18px 0; color: #95a3b3; }
-.footer-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
-@media (max-width: 900px) {
-  nav { display: none; }
-  .grid-4, .cards, .logos, .split, .cta-wrap { grid-template-columns: 1fr; }
+.fejlec {
+  min-height: 92vh;
+  padding: 1rem 1rem 3rem;
+  background: linear-gradient(rgba(12,18,32,.75), rgba(12,18,32,.95)),
+    radial-gradient(circle at 20% 10%, #1d2e4d 0, transparent 50%);
+}
+
+.navigacio {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-weight: 700; letter-spacing: .4px; }
+.menu { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.menu a { color: var(--szoveg); text-decoration: none; }
+.menu a:hover { color: var(--kiemelt); }
+.menu-gomb { display: none; }
+
+.hos {
+  max-width: 1080px;
+  margin: 6rem auto 0;
+}
+.cimke { color: var(--kiemelt); text-transform: uppercase; letter-spacing: 1px; }
+h1 { font-size: clamp(1.8rem, 4vw, 3.2rem); margin: .4rem 0; }
+
+.fo-gomb {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--kiemelt);
+  color: #00152e;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.szakasz { max-width: 1080px; margin: 0 auto; padding: 3rem 1rem; }
+.sotet { background: var(--panel); border-radius: .8rem; }
+.kartya-racs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; }
+.kartya { background: var(--panel); padding: 1rem; border-radius: .6rem; }
+.elony-lista { padding-left: 1.1rem; }
+.iparagak { display: flex; flex-wrap: wrap; gap: .6rem; }
+.iparagak span { background: var(--panel); padding: .45rem .8rem; border-radius: 999px; }
+.urlap { display: grid; gap: .65rem; max-width: 560px; }
+input, textarea {
+  width: 100%; padding: .7rem; border-radius: .45rem;
+  border: 1px solid #2a3d63; background: #0b1526; color: var(--szoveg);
+}
+.visszajelzes { color: var(--kiemelt); min-height: 1.2rem; }
+.labjegyzet { text-align: center; padding: 2rem 1rem 3rem; color: var(--halvany); }
+.labjegyzet a { color: var(--kiemelt); }
+
+@media (max-width: 760px) {
+  .menu-gomb {
+    display: inline-block; background: transparent; color: var(--szoveg);
+    border: 1px solid #415983; border-radius: .35rem; padding: .25rem .6rem;
+  }
+  .menu { display: none; position: absolute; right: 1rem; top: 3.6rem; background: #0c1627; padding: .9rem; border-radius: .5rem; flex-direction: column; }
+  .menu.nyitva { display: flex; }
 }
