@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guard Security Magyarország</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="fejlec" id="fent">
+    <nav class="navigacio">
+      <div class="logo">Guard Security HU</div>
+      <button id="menuGomb" class="menu-gomb" aria-label="Menü megnyitása">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#miert">Miért mi?</a></li>
+        <li><a href="#iparagak">Iparágak</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+      </ul>
+    </nav>
+
+    <section class="hos">
+      <p class="cimke">24/7 biztonsági megoldások</p>
+      <h1>Professzionális őrzés-védelem vállalatoknak és intézményeknek</h1>
+      <p>
+        A Guard Security magyar csapata modern technológiával, képzett szakemberekkel és gyors reagálással
+        gondoskodik emberei, létesítményei és értékei védelméről.
+      </p>
+      <a class="fo-gomb" href="#kapcsolat">Ingyenes konzultáció</a>
+    </section>
+  </header>
+
+  <main>
+    <section id="szolgaltatasok" class="szakasz">
+      <h2>Szolgáltatásaink</h2>
+      <div class="kartya-racs">
+        <article class="kartya">
+          <h3>Objektumvédelem</h3>
+          <p>Irodák, telephelyek és logisztikai központok teljes körű, folyamatos védelme.</p>
+        </article>
+        <article class="kartya">
+          <h3>Rendezvénybiztosítás</h3>
+          <p>Koncertek, konferenciák és sportesemények biztonságos lebonyolítása tapasztalt személyzettel.</p>
+        </article>
+        <article class="kartya">
+          <h3>Távfelügyelet</h3>
+          <p>Kamerarendszerek és riasztók valós idejű monitorozása azonnali beavatkozással.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="miert" class="szakasz sotet">
+      <h2>Miért választanak minket?</h2>
+      <ul class="elony-lista">
+        <li>✅ Több mint 15 év nemzetközi biztonsági tapasztalat</li>
+        <li>✅ Magyar nyelvű, dedikált ügyfélkapcsolat</li>
+        <li>✅ Testreszabott kockázatelemzés és biztonsági terv</li>
+        <li>✅ Gyors reagálás és folyamatos riportálás</li>
+      </ul>
+    </section>
+
+    <section id="iparagak" class="szakasz">
+      <h2>Iparágak, ahol bizonyítottunk</h2>
+      <div class="iparagak">
+        <span>Egészségügy</span>
+        <span>Oktatás</span>
+        <span>Kiskereskedelem</span>
+        <span>Ipari gyártás</span>
+        <span>Logisztika</span>
+        <span>Kritikus infrastruktúra</span>
+      </div>
+    </section>
+
+    <section id="kapcsolat" class="szakasz kapcsolat">
+      <h2>Kérjen ajánlatot</h2>
+      <form id="ajanlatUrlap" class="urlap">
+        <label for="nev">Név</label>
+        <input id="nev" name="nev" type="text" placeholder="Teljes név" required />
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="pelda@ceg.hu" required />
+
+        <label for="uzenet">Üzenet</label>
+        <textarea id="uzenet" name="uzenet" rows="4" placeholder="Miben segíthetünk?"></textarea>
+
+        <button type="submit" class="fo-gomb">Ajánlatkérés elküldése</button>
+        <p id="visszajelzes" class="visszajelzes" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="labjegyzet">
+    <p>© 2026 Guard Security HU – Minden jog fenntartva.</p>
+    <a href="#fent">Vissza az oldal tetejére</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

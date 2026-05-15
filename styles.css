@@ -1,0 +1,81 @@
+:root {
+  --hatter: #0c1220;
+  --panel: #111a2b;
+  --kiemelt: #00b3ff;
+  --szoveg: #eef4ff;
+  --halvany: #99aac9;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--hatter);
+  color: var(--szoveg);
+  line-height: 1.6;
+}
+
+.fejlec {
+  min-height: 92vh;
+  padding: 1rem 1rem 3rem;
+  background: linear-gradient(rgba(12,18,32,.75), rgba(12,18,32,.95)),
+    radial-gradient(circle at 20% 10%, #1d2e4d 0, transparent 50%);
+}
+
+.navigacio {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-weight: 700; letter-spacing: .4px; }
+.menu { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.menu a { color: var(--szoveg); text-decoration: none; }
+.menu a:hover { color: var(--kiemelt); }
+.menu-gomb { display: none; }
+
+.hos {
+  max-width: 1080px;
+  margin: 6rem auto 0;
+}
+.cimke { color: var(--kiemelt); text-transform: uppercase; letter-spacing: 1px; }
+h1 { font-size: clamp(1.8rem, 4vw, 3.2rem); margin: .4rem 0; }
+
+.fo-gomb {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--kiemelt);
+  color: #00152e;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.szakasz { max-width: 1080px; margin: 0 auto; padding: 3rem 1rem; }
+.sotet { background: var(--panel); border-radius: .8rem; }
+.kartya-racs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; }
+.kartya { background: var(--panel); padding: 1rem; border-radius: .6rem; }
+.elony-lista { padding-left: 1.1rem; }
+.iparagak { display: flex; flex-wrap: wrap; gap: .6rem; }
+.iparagak span { background: var(--panel); padding: .45rem .8rem; border-radius: 999px; }
+.urlap { display: grid; gap: .65rem; max-width: 560px; }
+input, textarea {
+  width: 100%; padding: .7rem; border-radius: .45rem;
+  border: 1px solid #2a3d63; background: #0b1526; color: var(--szoveg);
+}
+.visszajelzes { color: var(--kiemelt); min-height: 1.2rem; }
+.labjegyzet { text-align: center; padding: 2rem 1rem 3rem; color: var(--halvany); }
+.labjegyzet a { color: var(--kiemelt); }
+
+@media (max-width: 760px) {
+  .menu-gomb {
+    display: inline-block; background: transparent; color: var(--szoveg);
+    border: 1px solid #415983; border-radius: .35rem; padding: .25rem .6rem;
+  }
+  .menu { display: none; position: absolute; right: 1rem; top: 3.6rem; background: #0c1627; padding: .9rem; border-radius: .5rem; flex-direction: column; }
+  .menu.nyitva { display: flex; }
+}
