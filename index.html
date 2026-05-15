@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M-SISTEM Biztonsági Szolgálat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#">M-SISTEM</a>
+      <nav>
+        <a href="#szolgaltatasok">Szolgáltatások</a>
+        <a href="#rolunk">Rólunk</a>
+        <a href="#referenciak">Referenciák</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+      </nav>
+      <a class="btn btn-outline" href="tel:+3615550101">+36 1 555 0101</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">24/7 VÉDELEM • ORSZÁGOS LEFEDETTSÉG</p>
+      <h1>Professzionális vagyonvédelem vállalatoknak és magánügyfeleknek</h1>
+      <p class="lead">Megbízható őrzés-védelem, objektumvédelem, élőerős szolgálat és távfelügyelet modern rendszerekkel.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#kapcsolat">Ingyenes konzultáció</a>
+        <a class="btn btn-ghost" href="#szolgaltatasok">Szolgáltatásaink</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container grid-4">
+      <article><h3>15+</h3><p>év szakmai tapasztalat</p></article>
+      <article><h3>320+</h3><p>védett létesítmény</p></article>
+      <article><h3>98%</h3><p>ügyfél-elégedettség</p></article>
+      <article><h3>0-24</h3><p>diszpécserszolgálat</p></article>
+    </div>
+  </section>
+
+  <section id="szolgaltatasok" class="section">
+    <div class="container">
+      <h2>Szolgáltatásaink</h2>
+      <div class="cards">
+        <article class="card"><h3>Objektumvédelem</h3><p>Irodaházak, ipari parkok és telephelyek teljes körű őrzése járőrszolgálattal.</p></article>
+        <article class="card"><h3>Rendezvénybiztosítás</h3><p>Konferenciák, sportesemények és fesztiválok biztonsági koordinációja.</p></article>
+        <article class="card"><h3>Távfelügyelet</h3><p>Riasztó- és kamerarendszerek nonstop megfigyelése gyors reagálással.</p></article>
+        <article class="card"><h3>Személyvédelem</h3><p>Diszkrét és professzionális személyi védelem üzleti és privát eseményekre.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="rolunk" class="section alt">
+    <div class="container split">
+      <div>
+        <h2>Miért minket válasszon?</h2>
+        <p>Az M-SISTEM csapata tapasztalt biztonsági szakemberekből áll, akik gyorsan, fegyelmezetten és ügyfélközpontúan dolgoznak. Minden megbízást egyedi kockázatelemzéssel indítunk.</p>
+        <ul>
+          <li>Minősített, folyamatosan képzett állomány</li>
+          <li>GPS-alapú járőr- és incidens riportálás</li>
+          <li>Rugalmas szerződéses konstrukciók</li>
+        </ul>
+      </div>
+      <aside class="quote">
+        <p>„A biztonság nem költség, hanem befektetés.”</p>
+        <span>— M-SISTEM</span>
+      </aside>
+    </div>
+  </section>
+
+  <section id="referenciak" class="section">
+    <div class="container">
+      <h2>Kiemelt referenciák</h2>
+      <div class="logos">
+        <span>IPARI PARK A</span>
+        <span>LOGISZTIKA PRO</span>
+        <span>BUDAPEST EVENT HALL</span>
+        <span>ALFA IRODAHÁZ</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="kapcsolat" class="section cta">
+    <div class="container cta-wrap">
+      <div>
+        <h2>Kérjen személyre szabott ajánlatot 24 órán belül</h2>
+        <p>Töltse ki az űrlapot, vagy hívjon minket közvetlenül.</p>
+      </div>
+      <form class="contact-form" onsubmit="return submitForm(event)">
+        <input type="text" placeholder="Név" required>
+        <input type="email" placeholder="E-mail" required>
+        <textarea placeholder="Miben segíthetünk?" required></textarea>
+        <button class="btn" type="submit">Ajánlatkérés</button>
+        <p id="form-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>© 2026 M-SISTEM Biztonsági Szolgálat</p>
+      <p>Budapest • info@msistem.hu</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
